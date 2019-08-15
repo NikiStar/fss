@@ -58,6 +58,8 @@ Let's create a network we will assign to all three containers in order they to b
 
 
 ---
+Here cand be found the REST api documentation. It is available after the app is up and running:
+http://localhost:8080/swagger-ui.html#/
 
 In order to use the new app, use a REST tool of your choise e.g. Postman or directly the console calls curl  
 

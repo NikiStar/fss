@@ -8,12 +8,16 @@ import java.util.UUID;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.elasticsearch.annotations.Document;
 
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+
 /**
  * @author nikolaystariradeff
  *
  */
-@Document(indexName = "ix_flights", type = "flight", shards = 5)
-public class Flight {
+@ApiModel(description = "FlightInfo model ")
+@Document(indexName = "ix_flights", type = "flightinfo", shards = 5)
+public class FlightInfo {
 
 	public enum FlightStatus {
 		ontime, delayed
@@ -28,9 +32,13 @@ public class Flight {
 		return id == null ? UUID.randomUUID().toString() : id;
 	}
 
+	@ApiModelProperty("The flight number")
 	private String number;
+	@ApiModelProperty("The carrier")
 	private String carrier;
+	@ApiModelProperty("The status ontime or delayed")
 	private FlightStatus status;
+	@ApiModelProperty("A deviation from the schedule")
 	private String scheduleDeviation;
 
 
@@ -85,7 +93,7 @@ public class Flight {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Flight other = (Flight) obj;
+		FlightInfo other = (FlightInfo) obj;
 		if (carrier == null) {
 			if (other.carrier != null)
 				return false;
