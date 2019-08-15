@@ -42,7 +42,7 @@ Let's create a network we will assign to all three containers in order they to b
 
 **Build jar**
 
-	./mvnw package
+	mvn package
 
   
 
