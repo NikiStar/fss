@@ -19,6 +19,10 @@ import io.swagger.annotations.ApiOperation;
 
 
 
+/**
+ * @author nikolaystariradeff
+ *
+ */
 @RestController
 @RequestMapping("/flightsInfo")
 public class FlightStatusServiceController {
