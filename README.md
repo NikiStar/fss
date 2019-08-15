@@ -70,7 +70,7 @@ In order to use the new app, use a REST tool of your choise e.g. Postman or dire
 With CURL:
 	
 	curl -X POST \
-	http://localhost:8080/fss \
+	http://localhost:8080/flightsInfo \
 	-H 'Content-Type: application/json' \
 	-H 'Postman-Token: c867c003-d160-4e58-b6e2-aedf64f90f3d' \
 	-H 'cache-control: no-cache' \
@@ -92,7 +92,7 @@ With CURL:
 As HTTP:
 
 	POST /fss HTTP/1.1
-	Host: localhost:8080
+	Host: localhost:8080/flightsInfo
 	Content-Type: application/json
 	cache-control: no-cache
 	Postman-Token: 22b2921c-398a-41f5-b7f7-6438c5532d2d
